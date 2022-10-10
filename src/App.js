@@ -1,12 +1,8 @@
-import './App.css';
-import { Button } from 'react-bootstrap';
+import { RouterProvider } from 'react-router-dom';
+import router from './utilities/Routes';
 
 function App() {
-  return (
-    <div className="App">
-      <Button variant='outline-primary' className='mt-5'>Hellow world</Button>
-    </div>
-  );
+  return <RouterProvider router={router}/>
 }
 
 export default App;
