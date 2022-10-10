@@ -5,9 +5,9 @@ import Navbar from "react-bootstrap/Navbar";
 import { NavLink } from "react-router-dom";
 const Header = () => {
   return (
-    <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-      <Container>
-        <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+    <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" sticky="top">
+      <Container>        
+        <Navbar.Brand as={NavLink} to='/' className="fs-3">Test of Knowledge</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="ms-auto">
