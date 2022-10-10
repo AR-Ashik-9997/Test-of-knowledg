@@ -1,11 +1,25 @@
-import React from 'react';
-
+import React from "react";
+import Container from "react-bootstrap/Container";
+import Nav from "react-bootstrap/Nav";
+import Navbar from "react-bootstrap/Navbar";
+import { NavLink } from "react-router-dom";
 const Header = () => {
-    return (
-        <div>
-            <h1>this is header page</h1>
-        </div>
-    );
+  return (
+    <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+      <Container>
+        <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+        <Navbar.Collapse id="responsive-navbar-nav">
+          <Nav className="ms-auto">
+            <Nav.Link as={NavLink} to="/home">Home</Nav.Link>
+            <Nav.Link as={NavLink} to="/quiz">Quiz</Nav.Link>
+            <Nav.Link as={NavLink} to="statistics">Statistics</Nav.Link>
+            <Nav.Link as={NavLink} to="blog">Blog</Nav.Link>            
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
+  );
 };
 
 export default Header;
