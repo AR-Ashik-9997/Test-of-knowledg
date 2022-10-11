@@ -6,8 +6,9 @@ import "./Home.css";
 import { QuizContext } from "../../utilities/Root";
 import Cards from "../Cards/Cards";
 
+
 const Home = () => {
-  const quiz = useContext(QuizContext);
+  const quiz = useContext(QuizContext);  
   return (
     <div className="py-5">
       <Container>
@@ -53,7 +54,7 @@ const Home = () => {
         </Row>
         <Row className="g-4">
           {quiz.map((data, id) => (
-            <Cards key={id} card={data} />
+            <Cards key={id} card={data}/>
           ))}
         </Row>
       </Container>

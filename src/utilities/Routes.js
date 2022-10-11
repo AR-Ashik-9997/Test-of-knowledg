@@ -14,7 +14,7 @@ const router = createBrowserRouter([
     children: [
       { path: "/", element: <Home /> },
       { path: "/home", element: <Home /> },
-      { path: "/quiz", element: <Quiz /> },
+      { path: "/quiz/:quizId", loader:async({params})=>fetch(`https://openapi.programming-hero.com/api/quiz/${params.quizId}`), element: <Quiz /> },
       { path: "/statistics", element: <Statistics /> },
       { path: "/blog", element: <Blog /> },
     ],
