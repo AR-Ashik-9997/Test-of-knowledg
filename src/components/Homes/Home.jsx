@@ -1,9 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import "./Home.css";
+import { QuizContext } from "../../utilities/Root";
+import Cards from "../Cards/Cards";
+
 const Home = () => {
+  const quiz = useContext(QuizContext);
   return (
     <div className="py-5">
       <Container>
@@ -46,6 +50,11 @@ const Home = () => {
               </div>
             </div>
           </Col>
+        </Row>
+        <Row className="g-4">
+          {quiz.map((data, id) => (
+            <Cards key={id} card={data} />
+          ))}
         </Row>
       </Container>
     </div>

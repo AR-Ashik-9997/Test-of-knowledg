@@ -1,15 +1,16 @@
 import React from "react";
 import { createBrowserRouter } from "react-router-dom";
-import Root from "../components/Root";
-import Home from "../components/Home";
-import Quiz from "../components/Quiz";
-import Statistics from "../components/Statistics";
-import Blog from "../components/Blog";
+import Home from "../components/Homes/Home"
+import Quiz from "../components/Quiz/Quiz";
+import Statistics from "../components/Statistics/Statistics";
+import Blog from "../components/Blogs/Blog";
+import Root from "./Root";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root />,
+    loader:()=>fetch('https://openapi.programming-hero.com/api/quiz'),
     children: [
       { path: "/", element: <Home /> },
       { path: "/home", element: <Home /> },
