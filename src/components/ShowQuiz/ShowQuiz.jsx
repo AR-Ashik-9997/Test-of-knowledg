@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { Col, Container, Row } from "react-bootstrap";
+import { Container, Row } from "react-bootstrap";
 import { QuizContext } from "../../utilities/Root";
 import ShowCard from "../Cards/ShowCard";
 
@@ -11,9 +11,7 @@ const ShowQuiz = () => {
       <Container>
         <Row className="g-4">
           {quizCard.map((data, id) => (
-            <Col lg={3} md={6} sm={12}>
-              <ShowCard key={id} card={data} />
-            </Col>
+            <ShowCard key={id} card={data} />
           ))}
         </Row>
       </Container>

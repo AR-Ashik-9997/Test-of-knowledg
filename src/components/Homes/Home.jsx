@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
@@ -6,15 +6,13 @@ import "./Home.css";
 import { QuizContext } from "../../utilities/Root";
 import Cards from "../Cards/Cards";
 
-
 const Home = () => {
-
-  const quiz = useContext(QuizContext);     
+  const quiz = useContext(QuizContext);
   return (
     <div className="py-5">
       <Container>
         <Row className="my-5 flex-column-reverse flex-lg-row">
-          <Col lg={6} md={12} sm={12} className='mx-auto'>
+          <Col lg={6} md={12} sm={12} className="mx-auto">
             <h1 className="fs-1 mt-5">Test of your knowledge</h1>
             <div className="d-flex flex-column align-items-center justify-content-center">
               <p className="fs-5 text-justify my-2">
@@ -41,7 +39,7 @@ const Home = () => {
               </ul>
             </div>
           </Col>
-          <Col lg={6} md={12} sm={12} className='mx-auto'>
+          <Col lg={6} md={12} sm={12} className="mx-auto">
             <div className="d-flex flex-column align-items-center justify-content-center">
               <div>
                 <img

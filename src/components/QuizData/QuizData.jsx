@@ -28,7 +28,7 @@ const QuizData = ({ data,counter }) => {
       >
         <FontAwesomeIcon icon={faEye} className="fs-3" />
       </span>      
-      <h4 className="mt-3 ms-3">{counter+1}. {question.replace(/(<([^>]+)>)/ig, '')}</h4>
+      <h4 className="mt-3 ms-3">{counter+1}. {question.replace(/<[^>]*(>|$)|&nbsp;|&zwnj;|&raquo;|&laquo;|&gt;/g, ' ')}</h4>
       
       <Form>
         <Form.Group>

@@ -6,7 +6,7 @@ const ShowCard = ({ card }) => {
   const { id, name, logo, total } = card;
 
   return (
-    
+    <Col lg={3} md={6} sm={12}>
       <Card className=" mt-5">
         <div
           className="rounded shadow-sm py-5 px-4"
@@ -30,7 +30,7 @@ const ShowCard = ({ card }) => {
           </Card.Body>
         </div>
       </Card>
-
+    </Col>
   );
 };
 
