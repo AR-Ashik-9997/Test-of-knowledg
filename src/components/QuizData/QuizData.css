@@ -1,0 +1,7 @@
+input[type="radio"],
+input[type="radio"]+label{
+  cursor:pointer;
+  }
+p{
+  font-size:24px !important;
+}

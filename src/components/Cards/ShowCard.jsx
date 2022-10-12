@@ -1,14 +1,16 @@
 import React from "react";
-import { Button, Card, Col} from "react-bootstrap";
+import { Button, Card, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
-const Cards = ({ card}) => {
-  const {id,name, logo, total } = card;
+
+const ShowCard = ({ card }) => {
+  const { id, name, logo, total } = card;
+
   return (
-    <Col lg={3} md={6} sm={12}>
-      <Card className="mb-5">
+    
+      <Card className=" mt-5">
         <div
           className="rounded shadow-sm py-5 px-4"
-          style={{ backgroundImage: "linear-gradient(#30c5d2, #0470dc)" }}
+          style={{ backgroundImage: "linear-gradient(#145277, #30c5d2)" }}
         >
           <Card.Img
             variant="top"
@@ -21,13 +23,15 @@ const Cards = ({ card}) => {
             <Card.Title className="text-center fs-2">{name}</Card.Title>
             <div className="d-flex justify-content-between align-items-center mt-4">
               <Card.Text className="fs-5">Total quiz {total}</Card.Text>
-              <Link to={`/quiz/${id}`}><Button variant="success"> Start Quiz</Button></Link>
+              <Link to={`/quiz/${id}`}>
+                <Button variant="success"> Start Quiz</Button>
+              </Link>
             </div>
           </Card.Body>
         </div>
       </Card>
-    </Col>
+
   );
 };
 
-export default Cards;
+export default ShowCard;
