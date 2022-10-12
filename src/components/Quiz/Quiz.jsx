@@ -13,8 +13,8 @@ const Quiz = () => {
         <Row className="my-5">
           <Col lg={8} md={12} sm={12} className='mx-auto'>            
               <h1 className="mt-5 text-center">Quiz of {name}</h1>
-              {questions.map((quiz) => (
-                <QuizData key={quiz.id} data={quiz} />
+              {questions.map((quiz,index) => (
+                <QuizData key={quiz.id} data={quiz} counter={index} />
               ))}            
           </Col>          
         </Row>
